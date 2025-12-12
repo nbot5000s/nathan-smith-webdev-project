@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Smith | Hobbies & Interests</title>
+    <link rel="stylesheet" href="css/hobbies.css">
+</head>
+<body>
+<a id="top"></a>
+
+<nav class="top-nav">
+    <div class="nav-inner">
+        <span class="site-title">Nathan Smith</span>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Résumé</a>
+            <a href="#top" class="active">Hobbies</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>Hobbies & Interests</h1>
+        <p>
+            When I’m not in class or working on projects, you’ll usually find me outside, building something,
+            or cheering on the Cougars.
+        </p>
+        <a href="#trivia-app" class="hero-button">Jump to National Park Trivia App</a>
+    </div>
+</header>
+
+<main class="page-content">
+
+    <!-- Overview section with nested list -->
+    <section class="section-card">
+        <h2>What I Love Doing</h2>
+        <p>These are some of the things that keep me energized and excited:</p>
+
+        <!-- Ordered list containing an unordered list (nested) -->
+        <ol class="hobby-list">
+            <li>
+                Exploring the mountains
+                <ul>
+                    <li>Running on local trails</li>
+                    <li>Hiking to waterfalls and viewpoints</li>
+                    <li>Visiting as many national parks as possible</li>
+                </ul>
+            </li>
+            <li>Skiing on winter nights and powder days</li>
+            <li>Building detailed LEGO creations</li>
+            <li>Watching and supporting BYU sports</li>
+        </ol>
+    </section>
+
+    <!-- Image gallery -->
+    <section class="section-card">
+        <h2>Some Favorite Moments</h2>
+        <div class="gallery">
+            <figure class="gallery-item">
+                <img src="img/byu-sports.jpg" alt="Nathan at a BYU football game" />
+                <figcaption>Game day at LaVell Edwards Stadium cheering on BYU.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="img/lego.jpg" alt="Nathan holding a LEGO spaceship" />
+                <figcaption>One of my favorite LEGO builds – lots of pieces, lots of fun.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="img/skiing.jpg" alt="Nathan skiing at night" />
+                <figcaption>Night skiing sessions are some of my favorite winter memories.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="img/hiking.jpg" alt="Nathan hiking by a waterfall" />
+                <figcaption>Hiking to waterfalls and overlooks around Utah.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- YouTube embed -->
+    <section class="section-card">
+        <h2>Video Inspiration</h2>
+        <p>
+            I’m especially inspired by the beauty and variety of the national parks. Here’s a video documenting a backpacking trip I took to Yosemite in 2021. 
+        </p>
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/gMj-BPVnr7A"
+                title="Yosemite Backpacking Trip 2021"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+        </div>
+    </section>
+
+    <!-- National Park Trivia App -->
+    <section class="section-card" id="trivia-app">
+        <h2>National Park Trivia App</h2>
+        <p>
+            I love the national parks, and one of my bucket list goals is to visit them all.
+            Click the button below to generate a random national park trivia fact.
+        </p>
+
+        <div class="app-container">
+            <div class="app-output" id="trivia-output">
+                Click the button to see a trivia fact about U.S. national parks!
+            </div>
+            <button class="app-button" id="trivia-button">Give Me a Trivia Fact</button>
+        </div>
+    </section>
+
+    <!-- Tableau Embed -->
+    <section class="section-card">
+        <h2>Tracking the National Parks</h2>
+        <p>
+            This interactive Tableau visualization highlights the U.S. national parks—perfect for planning
+            future adventures and checking them off the bucket list.
+        </p>
+        <div class="tableau-wrapper">
+            <iframe
+                src="https://public.tableau.com/shared/5N3RDG6Z9?:showVizHome=no&:embed=true"
+                frameborder="0"
+                title="National Parks Tableau Visualization"
+                scrolling="no"
+            ></iframe>
+        </div>
+    </section>
+
+    <div class="back-to-top">
+        <a href="#top">Back to top ↑</a>
+    </div>
+</main>
+
+<footer class="page-footer">
+    <p>&copy; Nathan Smith &middot; Hobbies & Interests</p>
+</footer>
+
+<!-- Inline script for the trivia app -->
+<script>
+    const triviaFacts = [
+        "Yellowstone National Park, established in 1872, is widely considered the first national park in the world.",
+        "Wrangell–St. Elias in Alaska is the largest U.S. national park, bigger than the country of Switzerland.",
+        "Florida's Everglades is the only place on Earth where alligators and crocodiles coexist in the wild.",
+        "Great Smoky Mountains National Park is the most visited national park in the United States.",
+        "Denali in Alaska has the highest peak in North America, standing at 20,310 feet (6,190 meters).",
+        "Carlsbad Caverns National Park in New Mexico is famous for its massive cave chambers and bat flights.",
+        "Zion National Park in Utah is known for its steep red cliffs and hikes like Angels Landing and The Narrows.",
+        "Acadia National Park in Maine includes some of the first places in the U.S. to see the sunrise each day."
+    ];
+
+    const triviaButton = document.getElementById("trivia-button");
+    const triviaOutput = document.getElementById("trivia-output");
+
+    triviaButton.addEventListener("click", () => {
+        const index = Math.floor(Math.random() * triviaFacts.length);
+        triviaOutput.textContent = triviaFacts[index];
+    });
+</script>
+
+</body>
+</html>

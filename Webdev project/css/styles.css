@@ -1,0 +1,19 @@
+/* General typography tweaks */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Home page profile image */
+.home-profile {
+    max-width: 220px;
+}
+
+/* Slightly soften cards */
+.card {
+    border-radius: 0.75rem;
+}
+
+/* Footer text size */
+footer {
+    font-size: 0.9rem;
+}
